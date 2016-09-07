@@ -11,13 +11,46 @@
     <title></title>
 </head>
 
-<body>
+<body id="home" data-spy="scroll" data-target=".navbar" data-offset="100">
+    
+    <!--navbar-->
+    <nav class="navbar navbar-dark bg-primary navbar-fixed-top">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home"> Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about"> About </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#speakers"> Speakers </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#schedule"> Schedule</a>
+                </li>
+            </ul>
+            <a class="navbar-brand pull-sm-right m-r-0 hidden-xs-down" href="http://www.teamtreehouse.com">Presented by Treehouse</a>
+        </div>
+    </nav><!--/navbar-->
+    
+    <!--jumbotron-->
+    <div class="jumbotron jumbotron-fluid bg-info">
+        <div class="container text-sm-center p-t-3">
+            <h1 class="display-2">Full Stack Conf</h1>
+            <p class="lead">A one day conference about all things Javascript!</p>
+            <div class="btn-group m-e-2" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#register">Register Now</button>
+              <a class="btn btn-secondary btn-lg" href="#speakers">See Speakers</a>
+            </div>
+        </div>
+    </div><!--/jumbotron-->
     
     <!--.container-->
     <div class="container p-t-2">
         
         <!--about-->
-        <div class="row">
+        <div id="about" class="row">
             <div class="col-lg-4 push-lg-4">
                 <h3 class="m-b-2">About Full Stack Conf</h3>
                 <img class="m-b-1 img-fluid img-rounded hidden-xs-down" src="img/pdx.jpg" alt="portland">
@@ -46,12 +79,96 @@
         </div><!--/about-->
         
         <!--speakers-->
-        <h1 class="display-4 text-xs-center m-y-3 text-muted">Speakers</h1>
-        [Speaker bios he here]
+        <h1 id="speakers" class="display-4 text-xs-center m-y-3 text-muted">Speakers</h1>
+        <div class="row">
+      <div class="col-md-6 col-lg-4">
+          <div class="card">
+              <img class="card-img-top img-fluid" src="img/angie.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Angine McAngular</h4>
+                    <p class="card-text">Angine is a web developer and teacher who is passionate about building scalable, data driven web apps, especially ones that address old problems with new tech!</p>
+                  </div>
+            </div>
+        </div>
+
+      <div class="col-md-6 col-lg-4">
+          <div class="card">
+              <img class="card-img-top img-fluid" src="img/nodestradamus.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">NodeStradamus</h4>
+                    <p class="card-text">"NodeStra" is a software engineer and philosopher trying to leave the world better than he found it. He codes for non-profits, eCommerce, and large-scale web apps.</p>
+                  </div>
+            </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+          <div class="card">
+              <img class="card-img-top img-fluid" src="img/geo.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Geo "Lo" Cation</h4>
+                    <p class="card-text">Geo is a JavaScript developer working on large-scale applications. He's also a teacher who strives to support students in removing all barriers to learning code.</p>
+
+                  </div>
+            </div>
+      </div>
+            
+            <!--added clearfix to fix grid breaking content variations-->
+            <div class="clearfix hidden-lg-down"></div>
+
+      <div class="col-md-6 col-lg-4">
+          <div class="card">
+              <img class="card-img-top img-fluid" src="img/ecma.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Ecma Scriptnstuff</h4>
+                    <p class="card-text">Ecma found her passion for computers and programming over 15 years ago. She is excited to introduce people to the wonderful world of JavaScript.</p>
+                  </div>
+            </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+          <div class="card">
+              <img class="card-img-top img-fluid" src="img/jay.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Jay Query</h4>
+                    <p class="card-text">Jay is a developer, author of CSS: The Missing Manual, JavaScript &amp; jQuery: The Missing Manual, and web development teacher.</p>
+                  </div>
+            </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4">
+          <div class="card">
+              <img class="card-img-top img-fluid" src="img/json.png" alt="Card image cap">
+                  <div class="card-block">
+                    <h4 class="card-title">Json Babel</h4>
+                    <p class="card-text">All of his professional life, Json has worked with computers online; he is a polyglot programmer and likes using the right tools for the job.</p>
+                  </div>
+            </div>
+      </div>
+    </div><!-- /speakers -->
         
         <!--schedule-->
-        <h1 class="display-4 text-xs-center m-y-3 text-muted">Schedule</h1>
-        [Conference schedule goes here]
+        <h1 id="schedule" class="display-4 text-xs-center m-y-3 text-muted">Schedule</h1>
+        <ul class="list-group">
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Keynote: internet of Things<span class="tag tag-info tag-pill pull-xs-right">9:00am</span></h4>
+                NoteStradamus
+            </li>
+            <li class="list-group-item">
+              <h4 class="list-group-item-heading">Angular Basics<span class="tag tag-info tag-pill pull-xs-right">10:00am</span></h4>
+                Angie McAngular
+            </li>
+            <li class="list-group-item">
+               <h4 class="list-group-item-heading">Hey, Mongo!<span class="tag tag-info tag-pill pull-xs-right">11:00am</span></h4>
+                Jay Querie
+            </li>
+            <li class="list-group-item list-group-item-success">
+              <h4 class="list-group-item-heading">Lunch<span class="tag tag-info tag-pill pull-xs-right">12:00am</span></h4>
+                Free Pizza for Everyone
+            </li>
+            </ul><!--/schedule-->
+        
+        <!--callout-->
+        <button type="button" class="btn btn-outline-info btn-lg d-block m-x-auto m-y-3" data-toggle="modal" data-target="#register">Don't Miss Out, Register Now!</button>
         
         <!-- signup form -->
         <hr>
@@ -71,13 +188,68 @@
             </div>
         </div>
         <hr><!-- /signup form -->
+        
+        <!--footer-->
+        <div class="row p-y-1">
+            <div class="col-md-7">
+                <ul class="nav nav-inline">
+                  <li class="nav-item">
+                    <a class="nav-link active" href="#">Community</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Tracks</a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="btn-group dropup">
+                      <button type="button" class="btn btn-secondary">Other Confs</button>
+                      <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">CSS Conf</a>
+                        <a class="dropdown-item" href="#">Python Conf</a>
+                        <a class="dropdown-item" href="#">Java Conf</a>
+                        <a class="dropdown-item" href="#">Swift Conf</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="col-md-5 text-md-right">
+                <small>&copy; 2016 Full Stack Conf &amp; Treehouse</small>
+            </div>
+        </div>
+
+        <!--/footer-->
     
         </div><!--/.container-->
+    
+        <!--===================
+        FORM MODAL
+        ===================-->
+        <div id="register" class="modal fade">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Register for Full Stack Conf</h4>
+              </div>
+              <div class="modal-body">
+                <p>Form goes here...</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
     
     <!-- jQuery first, then Tether, then Bootstrap JS. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/js/bootstrap.min.js" integrity="VjEeINv9OSwtWFLAtmc4JCtEJXXBub00gtSnszmspDLCtC0I4z4nqz7rEFbIZLLU" crossorigin="anonymous"></script>
 </body>
-
 </html>
